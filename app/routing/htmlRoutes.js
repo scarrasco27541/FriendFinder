@@ -12,11 +12,11 @@ by using the .get method of our 'app' instance of an express server.
 
 */
 module.exports = function(app) {
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-  });
   app.get("/survey", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
+  });
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
   });
 //  app.post("/survey", function(req, res) {
    /// process some submitted survey data, for example

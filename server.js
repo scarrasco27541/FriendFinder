@@ -9,6 +9,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Pull in two route files
+// Needs to be in this order to avoid default taking over the api routes too
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
