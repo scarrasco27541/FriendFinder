@@ -1,3 +1,4 @@
+const friendsData = require("../data/friends");
 
 const path = require("path");
 
@@ -18,8 +19,5 @@ module.exports = function(app) {
   app.get("*", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
   });
-//  app.post("/survey", function(req, res) {
-   /// process some submitted survey data, for example
-//  });
 
 };
